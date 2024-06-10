@@ -1,0 +1,3 @@
+[submodule "mirador"]
+	path = mirador
+	url = git@github.com:data-futures/mirador.git
