@@ -12,6 +12,7 @@ module.exports = {
     },
   },
   webpack: {
+    publicPath: '/static/js/mirador3-dist/',
     aliases: {
       '@material-ui/core': path.resolve('./', 'node_modules', '@material-ui/core'),
       '@material-ui/styles': path.resolve('./', 'node_modules', '@material-ui/styles'),
