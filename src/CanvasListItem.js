@@ -66,8 +66,13 @@ class CanvasListItem extends Component {
 
   /** */
   editable() {
-    const { annotationsOnCanvases, canvases } = this.context;
+    const { annotationsOnCanvases, canvases, storageAdapter } = this.context;
     const { annotationid } = this.props;
+    const adapter = storageAdapter(canvases[0].id);
+    if (adapter.readOnly) {
+        return false;
+    }
+
     const annoIds = canvases.map((canvas) => {
       if (annotationsOnCanvases[canvas.id]) {
         return flatten(Object.entries(annotationsOnCanvases[canvas.id]).map(([key, value], i) => {

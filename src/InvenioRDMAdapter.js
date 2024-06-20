@@ -3,6 +3,7 @@ export default class InvenioRDMAdapter {
   /** */
   constructor(canvasId) {
     this.canvasId = canvasId;
+    this.readOnly = true;
   }
 
   /** */
